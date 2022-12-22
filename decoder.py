@@ -22,8 +22,8 @@ def split(p, root="", r_ind=0):
     ind = 1
     while abs(sum(p[:ind]) - sum(p[ind:])) > abs(sum(p[:ind+1]) - sum(p[ind+1:])):
         ind += 1
-    split(p[:ind], root+"1", r_ind=r_ind)
-    split(p[ind:], root+"0", r_ind=r_ind + ind)
+    split(p[:ind], root+"0", r_ind=r_ind)
+    split(p[ind:], root+"1", r_ind=r_ind + ind)
 
 
 
